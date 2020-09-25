@@ -3,8 +3,13 @@ import {
 	Break,
 	Column,
 	Container,
+	LanguageLabel,
+	LanguageOpt,
+	LanguagePicker,
+	LanguageSelectContainer,
 	Link,
 	Row,
+	SelectOpt,
 	Text,
 	Title,
 } from './styles/footer';
@@ -35,6 +40,28 @@ Footer.Text = function FooterText({ children, ...restProps }) {
 
 Footer.Break = function FooterBreak({ ...restProps }) {
 	return <Break {...restProps} />;
+};
+
+Footer.LanguagePicker = function FooterLanguagePicker({ ...restProps }) {
+	return <LanguagePicker {...restProps} />;
+};
+
+Footer.LanguageLabel = function FooterLanguageLabel({ ...restProps }) {
+	return <LanguageLabel {...restProps} />;
+};
+
+Footer.LanguageSelectContainer = function FooterLanguageSelectContainer({
+	...restProps
+}) {
+	return <LanguageSelectContainer {...restProps} />;
+};
+
+Footer.Select = function FooterSelect({ ...restProps }) {
+	return <SelectOpt {...restProps} />;
+};
+
+Footer.LanguageOpt = function FooterLanguageOpt({ ...restProps }) {
+	return <LanguageOpt {...restProps} />;
 };
 
 export default Footer;

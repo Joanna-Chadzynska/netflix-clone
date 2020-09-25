@@ -34,6 +34,18 @@ const FooterContainer = () => {
 				</Footer.Column>
 			</Footer.Row>
 			<Footer.Break />
+
+			<Footer.LanguagePicker>
+				<Footer.LanguageSelectContainer>
+					<Footer.Select>
+						<Footer.LanguageOpt value='en'>English</Footer.LanguageOpt>
+						<Footer.LanguageOpt value='pl'>Polski</Footer.LanguageOpt>
+					</Footer.Select>
+				</Footer.LanguageSelectContainer>
+			</Footer.LanguagePicker>
+
+			<Footer.Break />
+
 			<Footer.Text>Netflix Poland</Footer.Text>
 		</Footer>
 	);

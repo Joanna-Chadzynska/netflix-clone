@@ -1,10 +1,11 @@
 import React from 'react';
-import { Jumbotron } from './containers';
+import { Footer, Jumbotron } from './containers';
 
 const App = () => {
 	return (
 		<div className='App'>
 			<Jumbotron />
+			<Footer />
 		</div>
 	);
 };

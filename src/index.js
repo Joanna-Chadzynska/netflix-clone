@@ -1,13 +1,16 @@
+import 'normalize.css';
 import React from 'react';
 import { render } from 'react-dom';
-import 'normalize.css';
 import App from './App';
 import { GlobalStyles } from './styles/globalStyles';
+import Theme from './styles/theme';
 
 render(
 	<React.StrictMode>
-		<GlobalStyles />
-		<App />
+		<Theme>
+			<GlobalStyles />
+			<App />
+		</Theme>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

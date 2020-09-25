@@ -1,7 +1,7 @@
 // export * from './Accordion';
 // export * from './Card';
 // export * from './Feature';
-// export * from './Footer';
+export { default as Footer } from './Footer';
 // export * from './Form';
 // export * from './Header';
 export { default as Jumbotron } from './Jumbotron';

@@ -30,7 +30,7 @@ export const Column = styled.div`
 
 export const Link = styled.a`
 	color: ${({ theme }) => theme.colors.gray.light};
-	font-size: 0.812rem;
+	font-size: 0.875rem;
 	margin-bottom: 1.25rem;
 `;
 

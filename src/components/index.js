@@ -6,6 +6,6 @@ export { default as Footer } from './Footer';
 // export * from './Header';
 export { default as Jumbotron } from './Jumbotron';
 // export * from './Loading';
-// export * from './OptForm';
+export { default as OptForm } from './OptForm';
 // export * from './Player';
 // export * from './Profiles';

@@ -1,4 +1,4 @@
-// export * from './Accordion';
+export { default as Accordion } from './Accordion';
 // export * from './Card';
 // export * from './Feature';
 export { default as Footer } from './Footer';

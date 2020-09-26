@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Footer } from '../../components';
 
 const FooterContainer = () => {
+	const [lang, setLang] = useState('en');
+	const handleChangeLanguage = (e) => setLang(e.target.value);
+
 	return (
 		<Footer>
 			<Footer.Title>Questions? Contact us.</Footer.Title>
@@ -37,7 +40,7 @@ const FooterContainer = () => {
 
 			<Footer.LanguagePicker>
 				<Footer.LanguageSelectContainer>
-					<Footer.Select>
+					<Footer.Select id='lang' value={lang} onChange={handleChangeLanguage}>
 						<Footer.LanguageOpt value='en'>English</Footer.LanguageOpt>
 						<Footer.LanguageOpt value='pl'>Polski</Footer.LanguageOpt>
 					</Footer.Select>

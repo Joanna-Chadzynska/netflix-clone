@@ -18,7 +18,7 @@ export const Title = styled.h1`
 	color: ${({ theme }) => theme.colors.white};
 	font-size: clamp(2.187rem, 2.5vw, 3.125rem);
 	line-height: 1.1;
-	margin-top: 0;
+	margin-top: 1em;
 	margin-bottom: 8px;
 	text-align: center;
 

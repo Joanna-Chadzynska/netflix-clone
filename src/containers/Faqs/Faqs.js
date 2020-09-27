@@ -21,7 +21,12 @@ const Faqs = () => {
 				</OptForm.Text>
 
 				<OptForm.InputPlacement>
-					<OptForm.Input id='email' type='email' name='email' />
+					<OptForm.Input
+						id='email'
+						type='email'
+						name='email'
+						placeholder='Email address'
+					/>
 					<OptForm.Label htmlFor='email'>Email address</OptForm.Label>
 				</OptForm.InputPlacement>
 

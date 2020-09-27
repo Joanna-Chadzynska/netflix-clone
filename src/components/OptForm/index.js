@@ -27,7 +27,7 @@ const OptForm = ({ children, ...restProps }) => {
 	return (
 		<Container {...restProps}>
 			<InputContext.Provider value={{ values, handleChange, errors }}>
-				<Inner onSubmit={handleSubmit} noValidate>
+				<Inner onSubmit={handleSubmit} hasErrors={errors.email} noValidate>
 					{children}
 				</Inner>
 			</InputContext.Provider>
@@ -64,7 +64,12 @@ OptForm.Input = function OptFormInput({ ...restProps }) {
 };
 
 OptForm.Label = function OptFormLabel({ children, ...restProps }) {
-	return <Label {...restProps}>{children}</Label>;
+	const { errors } = useContext(InputContext);
+	return (
+		<Label {...restProps} hasErrors={errors.email}>
+			{children}
+		</Label>
+	);
 };
 OptForm.InputPlacement = function OptFormInputPlacement({
 	children,

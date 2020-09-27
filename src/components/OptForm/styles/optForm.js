@@ -5,6 +5,7 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	padding-bottom: 3.125rem;
 `;
 
 export const Inner = styled.form`
@@ -19,6 +20,7 @@ export const Inner = styled.form`
 	@media (max-width: 1000px) {
 		flex-direction: column;
 		align-items: center;
+		gap: ${({ hasErrors }) => (hasErrors ? '1rem' : '0')};
 	}
 `;
 
@@ -76,15 +78,17 @@ export const Button = styled.button`
 export const Label = styled.label`
 	color: #999;
 	position: absolute;
-	top: 50%;
-	left: 1rem;
-	transform: translateY(-50%);
-	transition: all 0.2s ease-out;
+	top: ${({ hasErrors }) => (hasErrors ? '10px' : '0')};
+	left: ${({ hasErrors }) => (hasErrors ? '10px' : '0')};
+	user-select: none;
+	transform: ${({ hasErrors }) =>
+		hasErrors && 'translate(1%, -10%) scale(0.8)'};
+	transition: transform 0.25s, opacity 0.25s ease-in-out;
+	transform-origin: 0 0;
+	opacity: 0.5;
 
-	@media (max-width: 1000px) {
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+	@media (min-width: 568px) {
+		/* left: 1rem; */
 	}
 `;
 
@@ -96,16 +100,41 @@ export const Input = styled.input`
 	max-width: 500px;
 	padding: 10px;
 	width: 100%;
+	margin-bottom: 3rem;
 
 	&:focus {
 		outline: none;
-		border-color: #0071eb;
+		box-shadow: 0;
 	}
 
-	&:focus + ${Label} {
-		font-size: 0.7rem;
-		font-weight: bold;
-		top: 12px;
+	&::placeholder {
+		color: transparent;
+	}
+
+	&,
+	& + ${Label} {
+		line-height: 1;
+		font: inherit;
+		padding: 1.5em;
+		height: 4em;
+	}
+
+	&:focus,
+	&:not(:placeholder-shown) {
+		border-color: #0071eb;
+		& + ${Label} {
+			transform: translate(1%, -10%) scale(0.8);
+		}
+	}
+
+	&:valid {
+		&:not(:placeholder-shown) {
+			border-color: ${({ theme }) => theme.colors.green.primary};
+		}
+	}
+
+	&:invalid {
+		border-color: ${({ theme }) => theme.colors.orange.secondary};
 	}
 
 	@media (min-width: 1000px) {
@@ -133,4 +162,17 @@ export const Break = styled.div`
 	height: 0;
 `;
 
-export const ErrorMessage = styled.p``;
+export const ErrorMessage = styled.p`
+	color: ${({ theme }) => theme.colors.orange.secondary};
+	font-size: 0.9rem;
+	margin-bottom: -6px;
+	padding: 6px 3px;
+	text-align: left;
+	position: absolute;
+	bottom: -1.5rem;
+	left: 0;
+
+	@media (max-width: 1000px) {
+		bottom: -1rem;
+	}
+`;

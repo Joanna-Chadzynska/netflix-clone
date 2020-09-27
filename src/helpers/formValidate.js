@@ -44,7 +44,7 @@ export const useForm = (callback, validate) => {
 			...values,
 			[event.target.name]: event.target.value,
 		}));
-		setErrors(validate(values));
+		// setErrors(validate(values));
 	};
 
 	return {

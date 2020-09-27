@@ -6,9 +6,9 @@ export const validateForm = (values) => {
 	let errors = {};
 
 	if (!values.email) {
-		errors.email = 'Email address is required';
+		errors.email = 'Email is required!';
 	} else if (!regexMail.test(values.email)) {
-		errors.email = 'Email address is invalid';
+		errors.email = 'Please enter a valid email address';
 	}
 
 	if (!values.password) {
@@ -44,6 +44,7 @@ export const useForm = (callback, validate) => {
 			...values,
 			[event.target.name]: event.target.value,
 		}));
+		setErrors(validate(values));
 	};
 
 	return {

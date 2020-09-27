@@ -24,7 +24,10 @@ const theme = {
 			btnLink: '#f40612',
 			btnPlay: '#ff1e1e',
 		},
-		orange: '#e87c03',
+		orange: {
+			primary: '#e87c03',
+			secondary: '#ffa00a',
+		},
 	},
 };
 

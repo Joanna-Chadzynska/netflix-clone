@@ -4,7 +4,6 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 	padding-bottom: 3.125rem;
 `;
 
@@ -16,6 +15,7 @@ export const Inner = styled.form`
 	margin-top: 20px;
 	flex-wrap: wrap;
 	width: 100%;
+	max-width: 815px;
 
 	@media (max-width: 1000px) {
 		flex-direction: column;
@@ -27,7 +27,7 @@ export const Inner = styled.form`
 export const Text = styled.p`
 	align-self: center;
 	color: ${({ theme }) => theme.colors.white};
-	font-size: clamp(1.5rem, 1.5vw, 1rem);
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
 	line-height: 22px;
 	margin: 0 auto;
 	padding-bottom: 20px;

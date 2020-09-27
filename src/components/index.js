@@ -3,7 +3,7 @@ export { default as Accordion } from './Accordion';
 // export * from './Feature';
 export { default as Footer } from './Footer';
 // export * from './Form';
-// export * from './Header';
+export { default as Header } from './Header';
 export { default as Jumbotron } from './Jumbotron';
 // export * from './Loading';
 export { default as OptForm } from './OptForm';

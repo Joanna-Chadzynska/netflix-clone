@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
-import { Browse, Home, NotFound, SignIn, SignUp } from './pages';
+import { Browse, Home, LoginHelp, NotFound, SignIn, SignUp } from './pages';
 
 const App = () => {
 	return (
@@ -18,6 +18,9 @@ const App = () => {
 				</Route>
 				<Route exact path={ROUTES.BROWSE}>
 					<Browse />
+				</Route>
+				<Route exact path={ROUTES.LOGIN_HELP}>
+					<LoginHelp />
 				</Route>
 				<Route path='*'>
 					<NotFound />

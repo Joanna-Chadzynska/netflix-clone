@@ -13,4 +13,8 @@ export const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
     }
+
+    h1 {
+        margin: 0 0 10px 0;
+    }
 `;

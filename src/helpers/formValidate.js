@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react';
-
 export const validateForm = (values) => {
 	const regexMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 	let errors = {};
+
+	if (!values.firstName) {
+		errors.firstName = 'First name is required';
+	} else if (values.firstName.length < 2) {
+		errors.firstName = 'Name should have at least 2 characters';
+	}
 
 	if (!values.email) {
 		errors.email = 'Email is required!';
@@ -18,39 +22,4 @@ export const validateForm = (values) => {
 	}
 
 	return errors;
-};
-
-export const useForm = (callback, validate) => {
-	const [values, setValues] = useState({});
-	const [errors, setErrors] = useState({});
-	const [isSubmitting, setIsSubmitting] = useState(false);
-
-	useEffect(() => {
-		if (Object.keys(errors).length === 0 && isSubmitting) {
-			callback();
-		}
-	}, [callback, errors, isSubmitting]);
-
-	const handleSubmit = (event) => {
-		if (event) event.preventDefault();
-		setErrors(validate(values));
-		setIsSubmitting(true);
-		setValues({});
-	};
-
-	const handleChange = (event) => {
-		event.persist();
-		setValues((values) => ({
-			...values,
-			[event.target.name]: event.target.value,
-		}));
-		// setErrors(validate(values));
-	};
-
-	return {
-		handleChange,
-		handleSubmit,
-		values,
-		errors,
-	};
 };

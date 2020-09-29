@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import { useForm } from '../../helpers/formValidate';
+import { useForm } from '../../hooks/useForm';
 import { validateForm } from './../../helpers/formValidate';
 import {
 	Break,
@@ -19,6 +19,7 @@ const OptForm = ({ children, ...restProps }) => {
 	const emailSend = () => {
 		console.log('No errors, submit callback called!');
 	};
+
 	const { values, errors, handleChange, handleSubmit } = useForm(
 		emailSend,
 		validateForm

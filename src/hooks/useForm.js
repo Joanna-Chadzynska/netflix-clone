@@ -9,19 +9,13 @@ export const useForm = (callback, validate) => {
 		if (Object.keys(errors).length === 0 && isSubmitting) {
 			callback();
 		}
-	}, [callback, errors, isSubmitting]);
-
-	// useEffect(() => {
-	// 	if (isSubmitting) {
-	// 		setValues({});
-	// 		console.log(values);
-	// 	}
-	// }, [isSubmitting, values]);
+	}, [callback, errors, isSubmitting, values]);
 
 	const handleSubmit = (event) => {
 		if (event) event.preventDefault();
 		setErrors(validate(values));
 		setIsSubmitting(true);
+		callback();
 	};
 
 	const handleChange = (event) => {

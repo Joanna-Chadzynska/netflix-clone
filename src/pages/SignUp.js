@@ -13,7 +13,6 @@ const SignUp = () => {
 	const { firebase } = useContext(FirebaseContext);
 
 	const handleSignUp = () => {
-		console.log(values);
 		return firebase
 			.auth()
 			.createUserWithEmailAndPassword(values.email, values.password)

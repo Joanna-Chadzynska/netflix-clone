@@ -20,6 +20,7 @@ const SignIn = () => {
 				history.push(ROUTES.BROWSE);
 			})
 			.catch((error) => {
+				console.log(error.message);
 				setAuthError(error.message);
 			});
 	};
@@ -36,7 +37,7 @@ const SignIn = () => {
 					<Form.Title>Sign In</Form.Title>
 					{authError && <Form.Error>{authError}</Form.Error>}
 
-					<Form.Base onSubmit={handleSubmit} noValidate>
+					<Form.Base onSubmit={handleSubmit} method='POST' noValidate>
 						<Form.Input
 							id='email'
 							type='email'
@@ -58,9 +59,7 @@ const SignIn = () => {
 
 						{errors.password && <Form.Error>{errors.password}</Form.Error>}
 
-						<Form.Submit disabled={errors.length > 0} type='submit'>
-							Sign In
-						</Form.Submit>
+						<Form.Submit type='submit'>Sign In</Form.Submit>
 
 						<Form.Help>
 							<div>

@@ -15,7 +15,7 @@ const App = () => {
 					user={user}
 					loggedInPath={ROUTES.BROWSE}
 					path={ROUTES.SIGN_IN}>
-					<SignIn />
+					<SignIn user={user} />
 				</IsUserRedirect>
 				<IsUserRedirect
 					user={user}

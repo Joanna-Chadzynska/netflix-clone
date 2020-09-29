@@ -13,7 +13,7 @@ const Browse = () => {
 	return (
 		<>
 			<BrowseContainer slides={slides} />
-			<button onClick={() => firebase.auth().signOut()}>logout</button>
+			{/* <button onClick={() => firebase.auth().signOut()}>logout</button> */}
 		</>
 	);
 };

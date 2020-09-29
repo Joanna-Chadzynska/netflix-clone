@@ -1,3 +1,4 @@
+export { default as BrowseContainer } from './Browse';
 export { default as Faqs } from './Faqs';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';

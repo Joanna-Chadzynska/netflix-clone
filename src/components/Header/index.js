@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link as ReachRouterLink } from 'react-router-dom';
+import { useClickOutside } from './../../hooks';
 import {
 	Background,
 	ButtonLink,
@@ -13,6 +14,9 @@ import {
 	Picture,
 	PlayButton,
 	Profile,
+	Search,
+	SearchIcon,
+	SearchInput,
 	Text,
 } from './styles/header';
 
@@ -73,6 +77,37 @@ Header.Picture = function HeaderPicture({ src, ...restProps }) {
 
 Header.Dropdown = function HeaderDropdown({ src, ...restProps }) {
 	return <Dropdown src={`/images/users/${src}.png`} {...restProps} />;
+};
+
+Header.Search = function HeaderSearch({
+	searchTerm,
+	setSearchTerm,
+	...restProps
+}) {
+	const { ref, clickOutside } = useClickOutside();
+	const [searchActive, setSearchActive] = useState(false);
+	const handleClickActive = () => setSearchActive(!searchActive);
+
+	useEffect(() => {
+		if (clickOutside) {
+			setSearchActive(false);
+		}
+	}, [clickOutside]);
+
+	return (
+		<Search {...restProps} ref={ref}>
+			<SearchIcon onClick={handleClickActive}>
+				<img src='/images/icons/search.png' alt='Search' />
+			</SearchIcon>
+			<SearchInput
+				type='search'
+				value={searchTerm}
+				onChange={(e) => setSearchTerm(e.target.value)}
+				placeholder='Search films and series'
+				active={searchActive}
+			/>
+		</Search>
+	);
 };
 
 export default Header;

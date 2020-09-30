@@ -6,6 +6,7 @@ import SelectProfile from '../Profiles';
 import { Header, Loading } from './../../components';
 
 const BrowseContainer = ({ slides }) => {
+	const [searchTerm, setSearchTerm] = useState('');
 	const [profile, setProfile] = useState({});
 	const [loading, setLoading] = useState(true);
 	const { firebase } = useContext(FirebaseContext);
@@ -27,6 +28,10 @@ const BrowseContainer = ({ slides }) => {
 					</Header.Group>
 
 					<Header.Group>
+						<Header.Search
+							searchTerm={searchTerm}
+							setSearchTerm={setSearchTerm}
+						/>
 						<Header.Profile>
 							<Header.Picture src={user.photoURL} />
 							<Header.Dropdown>

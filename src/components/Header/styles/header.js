@@ -7,6 +7,11 @@ export const Background = styled.div`
 	background: url(${({ src }) =>
 			src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
 		top left / cover no-repeat;
+
+	@media (max-width: 1100px) {
+		${({ dontShowOnSmallViewPort }) =>
+			dontShowOnSmallViewPort && 'background: none'}
+	}
 `;
 
 export const Container = styled.div`
@@ -47,4 +52,102 @@ export const ButtonLink = styled(ReachRouterLink)`
 		background-color: #fff;
 		background-color: ${({ theme }) => theme.colors.red.btnLink};
 	}
+`;
+
+export const Feature = styled(Container)`
+	padding: 150px 0 500px 0;
+	flex-direction: column;
+	align-items: normal;
+	width: 50%;
+
+	/* @media (max-width: 1100px) {
+		display: none;
+	} */
+`;
+
+export const Group = styled.div`
+	display: flex;
+	align-items: center;
+`;
+
+export const Text = styled.p`
+	color: white;
+	font-size: clamp(1.125rem, 3vw, 2rem);
+	line-height: normal;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+`;
+
+export const Link = styled.p`
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	letter-spacing: 2px;
+	margin-right: 1.875rem;
+	font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+	font-size: clamp(12px, 1.5vw, 16px);
+	transition: color 0.4s;
+
+	&:hover {
+		color: #b3b3b3;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+`;
+
+export const FeatureCallOut = styled.h2`
+	color: white;
+	font-size: clamp(1.625rem, 3vw, 3.125rem);
+	line-height: normal;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+	margin: 0;
+`;
+
+export const PlayButton = styled.button`
+	box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+	background-color: #e6e6e6;
+	color: #000;
+	border-width: 0;
+	padding: 10px 20px;
+	border-radius: 5px;
+	max-width: 8.125rem;
+	font-weight: bold;
+	font-size: clamp(0.75rem, 3vw, 1.375rem);
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+
+	&:hover {
+		background-color: #ff1e1e;
+		color: white;
+	}
+`;
+
+export const Profile = styled.div`
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+	position: relative;
+
+	button {
+		cursor: pointer;
+	}
+
+	/* &:hover > ${Dropdown} {
+		display: flex;
+		flex-direction: column;
+	} */
+`;
+
+export const Dropdown = styled.div``;
+
+export const Picture = styled.button`
+	background: url(${({ src }) => src});
+	background-size: contain;
+	border: 0;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
 `;

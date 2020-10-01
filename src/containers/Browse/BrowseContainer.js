@@ -3,7 +3,7 @@ import * as ROUTES from '../../constants/routes';
 import { FirebaseContext } from '../../context/firebase';
 import logo from '../../logo.svg';
 import SelectProfile from '../Profiles';
-import { Header, Loading } from './../../components';
+import { Card, Header, Loading } from './../../components';
 
 const BrowseContainer = ({ slides }) => {
 	const [category, setCategory] = useState('series');
@@ -77,6 +77,27 @@ const BrowseContainer = ({ slides }) => {
 					<Header.PlayButton>Play</Header.PlayButton>
 				</Header.Feature>
 			</Header>
+
+			<Card.Group>
+				{slideRows.map((slideItem) => (
+					<div key={`${category}-${slideItem.title.toLowerCase()}`}>
+						<Card.Title>{slideItem.title}</Card.Title>
+						<Card>
+							{slideItem.data.map((item) => (
+								<Card.Item key={item.docId} item={item}>
+									<Card.Image
+										src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
+									/>
+									<Card.Meta>
+										<Card.SubTitle>{item.title}</Card.SubTitle>
+										<Card.Text>{item.description}</Card.Text>
+									</Card.Meta>
+								</Card.Item>
+							))}
+						</Card>
+					</div>
+				))}
+			</Card.Group>
 		</>
 	) : (
 		<SelectProfile user={user} setProfile={setProfile} />

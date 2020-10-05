@@ -16,7 +16,7 @@ const Player = ({ children, ...restProps }) => {
 Player.Button = function PlayerButton({ ...restProps }) {
 	const { showPlayer, setShowPlayer } = useContext(PlayerContext);
 	return (
-		<Button {...restProps} onClick={() => setShowPlayer(() => !showPlayer)}>
+		<Button onClick={() => setShowPlayer(!showPlayer)} {...restProps}>
 			Play
 		</Button>
 	);

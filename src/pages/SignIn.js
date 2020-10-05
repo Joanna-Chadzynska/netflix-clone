@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { Form } from '../components';
 import * as ROUTES from '../constants/routes';
 import { Footer, HeaderWithLogo } from '../containers';
-import { validateForm } from '../helpers/formValidate';
 import { useForm } from '../hooks/useForm';
+import { validateForm } from '../utils';
 import { FirebaseContext } from './../context/firebase';
 
 const SignIn = () => {

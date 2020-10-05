@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { useForm } from '../../hooks/useForm';
-import { validateForm } from './../../helpers/formValidate';
+import { validateForm } from '../../utils';
 import {
 	Break,
 	Button,

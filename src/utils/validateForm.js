@@ -1,4 +1,4 @@
-export const validateForm = (values) => {
+const validateForm = (values) => {
 	const regexMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 	let errors = {};
@@ -23,3 +23,5 @@ export const validateForm = (values) => {
 
 	return errors;
 };
+
+export default validateForm;

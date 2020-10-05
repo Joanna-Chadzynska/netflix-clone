@@ -6,20 +6,15 @@ export const Title = styled.p`
 	font-weight: bold;
 	margin-left: 56px;
 	margin-right: 56px;
-	margin-top: 2rem;
-	justify-self: center;
+	margin-top: 0;
 `;
 
 export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	margin-bottom: 4rem;
+	margin-bottom: 50px;
 	box-sizing: border-box;
 
-	@media (min-width: 768px) {
-		flex-direction: row;
-	}
 	> ${Title} {
 		@media (max-width: 1000px) {
 			margin-left: 30px;
@@ -43,7 +38,6 @@ export const Group = styled.div`
 			margin-top: -150px;
 		}
 	}
-	margin-bottom: 4rem;
 `;
 
 export const SubTitle = styled.p`

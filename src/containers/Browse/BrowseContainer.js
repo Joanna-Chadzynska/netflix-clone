@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import * as ROUTES from '../../constants/routes';
 import { FirebaseContext } from '../../context/firebase';
 import logo from '../../logo.svg';
+import Footer from '../Footer';
 import SelectProfile from '../Profiles';
-import { Card, Header, Loading } from './../../components';
+import { Card, Header, Loading, Player } from './../../components';
 
 const BrowseContainer = ({ slides }) => {
 	const [category, setCategory] = useState('series');
@@ -80,9 +81,9 @@ const BrowseContainer = ({ slides }) => {
 
 			<Card.Group>
 				{slideRows.map((slideItem) => (
-					<div key={`${category}-${slideItem.title.toLowerCase()}`}>
+					<Card key={`${category}-${slideItem.title.toLowerCase()}`}>
 						<Card.Title>{slideItem.title}</Card.Title>
-						<Card>
+						<Card.Entities>
 							{slideItem.data.map((item) => (
 								<Card.Item key={item.docId} item={item}>
 									<Card.Image
@@ -94,10 +95,18 @@ const BrowseContainer = ({ slides }) => {
 									</Card.Meta>
 								</Card.Item>
 							))}
-						</Card>
-					</div>
+						</Card.Entities>
+						<Card.Feature category={category}>
+							<Player>
+								<Player.Button />
+								<Player.Video src='/videos/bunny.mp4' />
+							</Player>
+						</Card.Feature>
+					</Card>
 				))}
 			</Card.Group>
+
+			<Footer />
 		</>
 	) : (
 		<SelectProfile user={user} setProfile={setProfile} />

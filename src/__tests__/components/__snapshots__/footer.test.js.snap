@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> Simulates language selection 1`] = `
+<div
+  class="footer__Container-d7u6xc-0 GitiQ"
+>
+  <div
+    class="footer__LanguagePicker-d7u6xc-7 fvTGAf"
+  >
+    <div
+      class="footer__LanguageSelectContainer-d7u6xc-9 hFqowY"
+    >
+      <select
+        class="footer__SelectOpt-d7u6xc-10 jQOhye"
+        data-testid="select"
+      >
+        <option
+          class="footer__LanguageOpt-d7u6xc-11 hrhpfl"
+          data-testid="select-option"
+          value="en"
+        >
+          English
+        </option>
+        <option
+          class="footer__LanguageOpt-d7u6xc-11 hrhpfl"
+          data-testid="select-option"
+          value="pl"
+        >
+          Polski
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Footer/> renders the <Footer/> with populated data 1`] = `
+<div
+  class="footer__Container-d7u6xc-0 GitiQ"
+>
+  <p
+    class="footer__Title-d7u6xc-4 dapuIs"
+  >
+    Questions? Contact us.
+  </p>
+  <div
+    class="footer__Break-d7u6xc-6 cwVJzQ"
+  />
+  <div
+    class="footer__Row-d7u6xc-1 ekDGUn"
+  >
+    <div
+      class="footer__Column-d7u6xc-2 cHStxV"
+    >
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        FAQ
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Investor Relations
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Ways to Watch
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Corporate Information
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Netflix Originals
+      </a>
+    </div>
+    <div
+      class="footer__Column-d7u6xc-2 cHStxV"
+    >
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Help Center
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Jobs
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Terms of Use
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Contact Us
+      </a>
+    </div>
+    <div
+      class="footer__Column-d7u6xc-2 cHStxV"
+    >
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Account
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Redeem Gift Cards
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Privacy
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Speed Test
+      </a>
+    </div>
+    <div
+      class="footer__Column-d7u6xc-2 cHStxV"
+    >
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Media Center
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Buy Gift Cards
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Cookie Preferences
+      </a>
+      <a
+        class="footer__Link-d7u6xc-3 gkLnAH"
+        href="#"
+      >
+        Legal Notices
+      </a>
+    </div>
+  </div>
+  <div
+    class="footer__Break-d7u6xc-6 cwVJzQ"
+  />
+  <div
+    class="footer__LanguagePicker-d7u6xc-7 fvTGAf"
+  >
+    <div
+      class="footer__LanguageSelectContainer-d7u6xc-9 hFqowY"
+    >
+      <select
+        class="footer__SelectOpt-d7u6xc-10 jQOhye"
+        data-testid="select"
+      >
+        <option
+          class="footer__LanguageOpt-d7u6xc-11 hrhpfl"
+          data-testid="select-option"
+          value="en"
+        >
+          English
+        </option>
+        <option
+          class="footer__LanguageOpt-d7u6xc-11 hrhpfl"
+          data-testid="select-option"
+          value="pl"
+        >
+          Polski
+        </option>
+      </select>
+    </div>
+  </div>
+  <div
+    class="footer__Break-d7u6xc-6 cwVJzQ"
+  />
+  <p
+    class="footer__Text-d7u6xc-5 cFtMQQ"
+  >
+    Netflix Poland
+  </p>
+</div>
+`;

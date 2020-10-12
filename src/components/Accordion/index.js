@@ -56,7 +56,7 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 Accordion.Body = function AccordionBody({ children, ...restProps }) {
 	const { toggleShow } = useContext(ToggleContext);
 	return toggleShow ? (
-		<Body {...restProps} toggleShow>
+		<Body {...restProps} data-testid='accordion-body' toggleShow>
 			{children}
 		</Body>
 	) : null;

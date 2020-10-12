@@ -15,7 +15,7 @@ export const Inner = styled.div`
 `;
 
 export const Title = styled.h1`
-	color: ${({ theme }) => theme.colors.white};
+	color: #fff;
 	font-size: clamp(2.187rem, 2.5vw, 3.125rem);
 	line-height: 1.1;
 	margin-top: 1em;
@@ -33,7 +33,7 @@ export const Frame = styled.div`
 `;
 
 export const Item = styled.div`
-	color: ${({ theme }) => theme.colors.white};
+	color: #fff;
 	margin: auto;
 	margin-bottom: 8px;
 	max-width: 670px;
@@ -42,7 +42,7 @@ export const Item = styled.div`
 
 export const Header = styled.div`
 	align-items: center;
-	background-color: ${({ theme }) => theme.colors.gray.middle};
+	background-color: #303030;
 	cursor: pointer;
 	display: flex;
 	font-size: clamp(1.25rem, 2vw, 2rem);
@@ -63,7 +63,7 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.div`
-	background-color: ${({ theme }) => theme.colors.gray.middle};
+	background-color: #303030;
 	font-size: clamp(1.25rem, 2vw, 2rem);
 	font-weight: normal;
 	line-height: normal;

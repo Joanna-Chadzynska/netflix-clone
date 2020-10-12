@@ -29,19 +29,19 @@ export const Column = styled.div`
 `;
 
 export const Link = styled.a`
-	color: ${({ theme }) => theme.colors.gray.light};
+	color: #757575;
 	font-size: 0.875rem;
 	margin-bottom: 1.25rem;
 `;
 
 export const Title = styled.p`
-	color: ${({ theme }) => theme.colors.gray.light};
+	color: #757575;
 	font-size: 1rem;
 	margin-bottom: 2.5rem;
 `;
 
 export const Text = styled.p`
-	color: ${({ theme }) => theme.colors.gray.light};
+	color: #757575;
 	font-size: 0.812rem;
 	margin-bottom: 2.5rem;
 `;

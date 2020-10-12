@@ -3,9 +3,6 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@testing-library/jest-dom": "^4.2.4",
-		"@testing-library/react": "^9.5.0",
-		"@testing-library/user-event": "^7.2.1",
 		"firebase": "^7.21.1",
 		"fuse.js": "^6.4.1",
 		"normalize.css": "^8.0.1",
@@ -39,7 +36,7 @@
 	"jest": {
 		"collectCoverageFrom": [
 			"<rootDir>/src/**/*.js",
-			"!<rootDir>/src/app.js",
+			"!<rootDir>/src/App.js",
 			"!<rootDir>/src/helpers/routes.js",
 			"!<rootDir>/src/lib/firebase.js",
 			"!<rootDir>/src/lib/firebase.prod.js",
@@ -67,6 +64,10 @@
 		]
 	},
 	"devDependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.5.0",
+		"@testing-library/user-event": "^7.2.1",
+		"@types/testing-library__jest-dom": "^5.9.4",
 		"eslint-plugin-react": "^7.21.2"
 	}
 }

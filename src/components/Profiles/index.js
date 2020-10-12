@@ -29,6 +29,7 @@ Profiles.Picture = function ProfilesPicture({ src, ...restProps }) {
 		<Picture
 			{...restProps}
 			src={src ? `/images/users/${src}.png` : '/images/misc/loading.gif'}
+			data-testid='profile-picture'
 		/>
 	);
 };

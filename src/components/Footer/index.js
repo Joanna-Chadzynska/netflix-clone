@@ -3,7 +3,6 @@ import {
 	Break,
 	Column,
 	Container,
-	LanguageLabel,
 	LanguageOpt,
 	LanguagePicker,
 	LanguageSelectContainer,
@@ -46,10 +45,6 @@ Footer.LanguagePicker = function FooterLanguagePicker({ ...restProps }) {
 	return <LanguagePicker {...restProps} />;
 };
 
-Footer.LanguageLabel = function FooterLanguageLabel({ ...restProps }) {
-	return <LanguageLabel {...restProps} />;
-};
-
 Footer.LanguageSelectContainer = function FooterLanguageSelectContainer({
 	...restProps
 }) {
@@ -57,11 +52,13 @@ Footer.LanguageSelectContainer = function FooterLanguageSelectContainer({
 };
 
 Footer.Select = function FooterSelect({ ...restProps }) {
-	return <SelectOpt {...restProps} />;
+	return <SelectOpt {...restProps} data-testid='select' />;
 };
 
-Footer.LanguageOpt = function FooterLanguageOpt({ ...restProps }) {
-	return <LanguageOpt {...restProps} />;
+Footer.LanguageOpt = function FooterLanguageOpt({ value, ...restProps }) {
+	return (
+		<LanguageOpt {...restProps} data-testid='select-option' value={value} />
+	);
 };
 
 export default Footer;

@@ -58,7 +58,10 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
 		setShowFeature(true);
 	};
 	return (
-		<Item {...restProps} onClick={handleFeature}>
+		<Item
+			{...restProps}
+			onClick={handleFeature}
+			data-testid={`${item.slug}-item-feature`}>
 			{children}
 		</Item>
 	);

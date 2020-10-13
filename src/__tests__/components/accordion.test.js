@@ -23,6 +23,7 @@ describe('<Accordion/>', () => {
 		queryByText = component.queryByText;
 		container = component.container;
 	});
+
 	it('renders the <Accordion /> with populated data', () => {
 		expect(getByText('Frequently Asked Questions')).toBeTruthy();
 		expect(getByText('What is Netflix?')).toBeTruthy();

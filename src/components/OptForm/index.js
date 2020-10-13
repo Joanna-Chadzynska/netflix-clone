@@ -17,7 +17,7 @@ const InputContext = createContext();
 
 const OptForm = ({ children, ...restProps }) => {
 	const emailSend = () => {
-		console.log('No errors, submit callback called!');
+		// console.log('No errors, submit callback called!');
 	};
 
 	const { values, errors, handleChange, handleSubmit } = useForm(

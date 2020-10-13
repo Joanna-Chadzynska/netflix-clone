@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form/> changes style fo div as checkbox is checked/unchecked 1`] = `
+<div
+  class="form__Container-qpiga1-0 fnwLdM"
+>
+  <div
+    class="form__Help-qpiga1-6 hLEEoV"
+  >
+    <div>
+      <input
+        class="form__Input-qpiga1-7 cOySTy"
+        data-testid="remember-checkbox"
+        id="checkbox"
+        name="checkbox"
+        type="checkbox"
+      />
+      <label
+        class="form__Label-qpiga1-8 kxrDLO"
+        for="checkbox"
+      >
+        <span>
+          Remember me
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Form/> renders the <Form /> with an error 1`] = `
+<div
+  class="form__Container-qpiga1-0 fnwLdM"
+>
+  <div
+    class="form__Error-qpiga1-2 jIpdXL"
+  >
+    Your email address is already being used
+  </div>
+  <button
+    class="form__Submit-qpiga1-9 kHORoS"
+    type="submit"
+  >
+    Sign In
+  </button>
+</div>
+`;
+
+exports[`<Form/> renders the basic <Form /> with populated data 1`] = `
+<div
+  class="form__Container-qpiga1-0 fnwLdM"
+>
+  <h1
+    class="form__Title-qpiga1-3 dnrxwC"
+  >
+    Sign In Now
+  </h1>
+  <form
+    class="form__Base-qpiga1-1 euJEOL"
+  >
+    <input
+      class="form__Input-qpiga1-7 cOySTy"
+      placeholder="Email address"
+    />
+    <input
+      class="form__Input-qpiga1-7 cOySTy"
+      placeholder="Password"
+      type="password"
+    />
+    <button
+      class="form__Submit-qpiga1-9 kHORoS"
+      disabled=""
+      type="submit"
+    >
+      Sign In
+    </button>
+    <div
+      class="form__Help-qpiga1-6 hLEEoV"
+    >
+      <div>
+        <input
+          class="form__Input-qpiga1-7 cOySTy"
+          data-testid="remember-checkbox"
+          id="checkbox"
+          name="checkbox"
+          type="checkbox"
+        />
+        <label
+          class="form__Label-qpiga1-8 kxrDLO"
+          for="checkbox"
+        >
+          <span>
+            Remember me
+          </span>
+        </label>
+      </div>
+    </div>
+  </form>
+  <p
+    class="form__Text-qpiga1-4 hGhJno"
+  >
+    New to Netflix? 
+  </p>
+  <p
+    class="form__TextSmall-qpiga1-5 jRkGEE"
+  >
+    This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+  </p>
+</div>
+`;

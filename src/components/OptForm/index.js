@@ -16,12 +16,12 @@ import {
 const InputContext = createContext();
 
 const OptForm = ({ children, ...restProps }) => {
-	const emailSend = () => {
-		// console.log('No errors, submit callback called!');
-	};
+	// const emailSend = () => {
+	// 	// console.log('No errors, submit callback called!');
+	// };
 
 	const { values, errors, handleChange, handleSubmit } = useForm(
-		emailSend,
+		console.log('No errors, submit callback called!'),
 		validateForm
 	);
 
@@ -50,17 +50,19 @@ OptForm.Button = function OptFormButton({ children, ...restProps }) {
 };
 
 OptForm.Input = function OptFormInput({ ...restProps }) {
-	const { values, handleChange, errors } = useContext(InputContext);
+	const { values, handleChange } = useContext(InputContext);
 
 	return (
-		<>
-			<Input
-				{...restProps}
-				onChange={handleChange}
-				value={values.email || ''}
-			/>
-			{errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
-		</>
+		<Input {...restProps} onChange={handleChange} value={values.email || ''} />
+	);
+};
+
+OptForm.ErrorMessage = function OptFormErrorMessage({ message, ...restProps }) {
+	const { errors } = useContext(InputContext);
+	return (
+		<ErrorMessage {...restProps} data-testid='error-message'>
+			{errors.email ? errors.email : message}
+		</ErrorMessage>
 	);
 };
 

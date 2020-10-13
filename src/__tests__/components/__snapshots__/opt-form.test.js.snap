@@ -22,6 +22,10 @@ exports[`<OptForm/> renders the basic <OptForm /> with populated data 1`] = `
         placeholder="Email address"
         value=""
       />
+      <p
+        class="optForm__ErrorMessage-sc-19balfk-8 cyIFID"
+        data-testid="error-message"
+      />
       <label
         class="optForm__Label-sc-19balfk-4 gABSgE"
         for="email"

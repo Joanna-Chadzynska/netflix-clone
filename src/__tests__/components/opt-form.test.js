@@ -5,6 +5,10 @@ import Theme from '../../styles/theme';
 
 describe('<OptForm/>', () => {
 	it('renders the basic <OptForm /> with populated data', () => {
+		const message = '';
+		const errors = {
+			email: 'Email is required!',
+		};
 		const {
 			container,
 			getByPlaceholderText,
@@ -20,7 +24,12 @@ describe('<OptForm/>', () => {
 
 					<OptForm.InputPlacement>
 						<OptForm.Input placeholder='Email address' id='email' />
-						<OptForm.Label hasErrors='true' htmlFor='email'>
+
+						<OptForm.ErrorMessage>
+							{errors.email ? errors.email : message}
+						</OptForm.ErrorMessage>
+
+						<OptForm.Label hasErrors htmlFor='email'>
 							Email address
 						</OptForm.Label>
 					</OptForm.InputPlacement>
@@ -39,7 +48,7 @@ describe('<OptForm/>', () => {
 			)
 		).toBeTruthy();
 		expect(getByPlaceholderText('Email address')).toBeTruthy();
-
+		expect(queryByText('Email is required!')).toBeFalsy();
 		expect(container.firstChild).toMatchSnapshot();
 	});
 });

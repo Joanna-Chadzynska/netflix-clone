@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error/> renders component <Error/> with populated data 1`] = `
+<div
+  class="error__Background-cntjj-2 ffqOVq"
+>
+  <div
+    class="error__Container-cntjj-0 kmIjvc"
+  >
+    <div
+      class="error__Inner-cntjj-1 hAoZju"
+    >
+      <h1
+        class="error__Title-cntjj-3 dyfLrx"
+      >
+        Lost your way?.
+      </h1>
+      <div
+        class="error__Content-cntjj-4 hcEKBL"
+      >
+        <p
+          class="error__SubTitle-cntjj-5 kbeEsw"
+        >
+          Sorry, we can't find that page. You'll find lots to explore on the home page.
+        </p>
+        <div
+          class="error__Code-cntjj-7 iJGCSa"
+        >
+          <span>
+            Error Code 
+            <strong>
+              NSES-404
+            </strong>
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      class="error__ImageSource-cntjj-8 kEujYS"
+    >
+      <span>
+        From 
+        <strong>
+          Lost in space
+        </strong>
+      </span>
+    </span>
+    <div
+      class="error__RequestInfo-cntjj-9 hIxrUj"
+    >
+      <p>
+        Build Identifier: v6591ee28
+      </p>
+      <p>
+        Instance: i-0e688907957decfb8
+      </p>
+      <p>
+        Request Id: d2a05002-4b20-48c4-b28c-a0529bc7f2f2-240198057
+      </p>
+    </div>
+  </div>
+</div>
+`;

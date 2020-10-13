@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Jumbotron/> renders the basic <Jumbotron /> with populated data 1`] = `
+exports[`<Jumbotron/> renders the <Jumbotron /> with populated data 1`] = `
 <div
   class="jumbotron__Container-sc-4dif3w-2 bYOWlL"
 >
@@ -41,8 +41,8 @@ exports[`<Jumbotron/> renders the basic <Jumbotron /> with populated data 1`] = 
     class="jumbotron__Item-sc-4dif3w-0 frMsBR"
   >
     <div
-      class="jumbotron__Inner-sc-4dif3w-1 dZDOWt"
-      direction="row-reverse"
+      class="jumbotron__Inner-sc-4dif3w-1 bGIDgw"
+      direction="row"
     >
       <div
         class="jumbotron__Pane-sc-4dif3w-3 bLIgTa"

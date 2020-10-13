@@ -23,6 +23,7 @@ const Home = () => {
 								name='email'
 								placeholder='Email address'
 							/>
+							<OptForm.ErrorMessage />
 							<OptForm.Label htmlFor='email'>Email address</OptForm.Label>
 						</OptForm.InputPlacement>
 

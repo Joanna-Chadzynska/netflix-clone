@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { Header } from '../../components';
 import Theme from '../../styles/theme';
@@ -38,6 +38,71 @@ describe('<Header/>', () => {
 
 		expect(getByText('Hello I am a link!')).toBeTruthy();
 		expect(queryByTestId('header-bg')).toBeFalsy();
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	it('renders the full <Header /> with a background', () => {
+		const { container, getByText, queryByTestId } = render(
+			<Theme>
+				<Header src='joker1' dontShowOnSmallViewPort>
+					<Header.Frame>
+						<Header.Group>
+							<Header.Logo to='/Home' src='../../logo.svg' alt='Netflix' />
+							<Header.TextLink active={false} onClick={() => {}}>
+								Series
+							</Header.TextLink>
+							<Header.TextLink active={false} onClick={() => {}}>
+								Films
+							</Header.TextLink>
+						</Header.Group>
+
+						<Header.Group>
+							<Header.Search searchTerm='Joker' setSearchTerm={() => {}} />
+							<Header.Profile>
+								<Header.Picture src='/images/users/1.png' />
+								<Header.Dropdown>
+									<Header.Group>
+										<Header.Picture src='/images/users/1.png' />
+										<Header.TextLink>Joanna Chad</Header.TextLink>
+									</Header.Group>
+
+									<Header.Group>
+										<Header.TextLink onClick={() => {}}>
+											Sign out
+										</Header.TextLink>
+									</Header.Group>
+								</Header.Dropdown>
+							</Header.Profile>
+						</Header.Group>
+					</Header.Frame>
+
+					<Header.Feature>
+						<Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
+						<Header.Text>Forever alone in a crowd ...</Header.Text>
+						<Header.PlayButton>Play</Header.PlayButton>
+					</Header.Feature>
+				</Header>
+			</Theme>
+		);
+
+		expect(queryByTestId('search-input')).toBeTruthy();
+		expect(queryByTestId('search-outside')).toBeTruthy();
+		expect(queryByTestId('search-input').value).toBe('Joker');
+
+		fireEvent.change(queryByTestId('search-input'), {
+			target: { value: 'Simpsons' },
+		});
+
+		fireEvent.click(queryByTestId('search-click'));
+
+		expect(getByText('Series')).toBeTruthy();
+		expect(getByText('Films')).toBeTruthy();
+		expect(getByText('Joanna Chad')).toBeTruthy();
+		expect(getByText('Watch Joker Now')).toBeTruthy();
+		expect(getByText('Sign out')).toBeTruthy();
+		expect(getByText('Forever alone in a crowd ...')).toBeTruthy();
+		expect(getByText('Play')).toBeTruthy();
+
 		expect(container.firstChild).toMatchSnapshot();
 	});
 });

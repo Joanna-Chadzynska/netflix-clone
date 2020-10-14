@@ -101,8 +101,8 @@ Header.Search = function HeaderSearch({
 	}, [clickOutside]);
 
 	return (
-		<Search {...restProps} ref={ref}>
-			<SearchIcon onClick={handleClickActive}>
+		<Search {...restProps} ref={ref} data-testid='search-outside'>
+			<SearchIcon onClick={handleClickActive} data-testid='search-click'>
 				<img src='/images/icons/search.png' alt='Search' />
 			</SearchIcon>
 			<SearchInput
@@ -111,6 +111,7 @@ Header.Search = function HeaderSearch({
 				onChange={(e) => setSearchTerm(e.target.value)}
 				placeholder='Search films and series'
 				active={searchActive}
+				data-testid='search-input'
 			/>
 		</Search>
 	);

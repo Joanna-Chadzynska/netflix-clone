@@ -28,3 +28,109 @@ exports[`<Header/> renders the basic <Header /> without a background 1`] = `
   </p>
 </div>
 `;
+
+exports[`<Header/> renders the full <Header /> with a background 1`] = `
+<div
+  class="header__Background-pfhypo-0 fsuOjF"
+  data-testid="header-bg"
+  src="joker1"
+>
+  <div
+    class="header__Container-pfhypo-1 cSjiAp"
+  >
+    <div
+      class="header__Group-pfhypo-5 cQCAUx"
+    >
+      <p
+        class="header__Link-pfhypo-7 iKtTJP"
+      >
+        Series
+      </p>
+      <p
+        class="header__Link-pfhypo-7 iKtTJP"
+      >
+        Films
+      </p>
+    </div>
+    <div
+      class="header__Group-pfhypo-5 cQCAUx"
+    >
+      <div
+        class="header__Search-pfhypo-13 fYfJSm"
+        data-testid="search-outside"
+      >
+        <button
+          class="header__SearchIcon-pfhypo-14 flmXXJ"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="header__SearchInput-pfhypo-15 gDdEfx"
+          data-testid="search-input"
+          placeholder="Search films and series"
+          type="search"
+          value="Joker"
+        />
+      </div>
+      <div
+        class="header__Profile-pfhypo-12 jdRHLb"
+      >
+        <button
+          class="header__Picture-pfhypo-10 bSNMoe"
+          src="/images/users//images/users/1.png.png"
+        />
+        <div
+          class="header__Dropdown-pfhypo-11 dnsIfC"
+          src="/images/users/undefined.png"
+        >
+          <div
+            class="header__Group-pfhypo-5 cQCAUx"
+          >
+            <button
+              class="header__Picture-pfhypo-10 bSNMoe"
+              src="/images/users//images/users/1.png.png"
+            />
+            <p
+              class="header__Link-pfhypo-7 iKtTJP"
+            >
+              Joanna Chad
+            </p>
+          </div>
+          <div
+            class="header__Group-pfhypo-5 cQCAUx"
+          >
+            <p
+              class="header__Link-pfhypo-7 iKtTJP"
+            >
+              Sign out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="header__Container-pfhypo-1 header__Feature-pfhypo-4 cSjiAp bXwAFd"
+  >
+    <h2
+      class="header__FeatureCallOut-pfhypo-8 bFXKXX"
+    >
+      Watch Joker Now
+    </h2>
+    <p
+      class="header__Text-pfhypo-6 eJWHLr"
+    >
+      Forever alone in a crowd ...
+    </p>
+    <button
+      class="header__PlayButton-pfhypo-9 lotqCk"
+    >
+      Play
+    </button>
+  </div>
+</div>
+`;

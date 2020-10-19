@@ -20,7 +20,6 @@ const SignIn = () => {
 				history.push(ROUTES.BROWSE);
 			})
 			.catch((error) => {
-				console.log(error.message);
 				setAuthError(error.message);
 			});
 	};
@@ -35,7 +34,9 @@ const SignIn = () => {
 			<HeaderWithLogo>
 				<Form>
 					<Form.Title>Sign In</Form.Title>
-					{authError && <Form.Error>{authError}</Form.Error>}
+					{authError && (
+						<Form.Error data-testid='error'>{authError}</Form.Error>
+					)}
 
 					<Form.Base onSubmit={handleSubmit} method='POST' noValidate>
 						<Form.Input
@@ -46,7 +47,9 @@ const SignIn = () => {
 							placeholder='Email or phone number'
 							onChange={handleChange}
 						/>
-						{errors.email && <Form.Error>{errors.email}</Form.Error>}
+						{errors.email && (
+							<Form.Error data-testid='error-email'>{errors.email}</Form.Error>
+						)}
 						<Form.Input
 							id='password'
 							type='password'
@@ -59,7 +62,9 @@ const SignIn = () => {
 
 						{errors.password && <Form.Error>{errors.password}</Form.Error>}
 
-						<Form.Submit type='submit'>Sign In</Form.Submit>
+						<Form.Submit type='submit' data-testid='sign-in'>
+							Sign In
+						</Form.Submit>
 
 						<Form.Help>
 							<div>

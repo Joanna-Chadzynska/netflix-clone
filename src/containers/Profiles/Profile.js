@@ -14,7 +14,7 @@ const SelectProfile = ({ user, setProfile }) => {
 			<Profiles>
 				<Profiles.Title>Who's watching?</Profiles.Title>
 				<Profiles.List>
-					<Profiles.User onClick={handleProfile}>
+					<Profiles.User onClick={handleProfile} data-testid='user-profile'>
 						<Profiles.Picture src={user.photoURL} />
 						<Profiles.UserName>{user.displayName}</Profiles.UserName>
 					</Profiles.User>

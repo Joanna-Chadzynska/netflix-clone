@@ -1,9 +1,10 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowseContainer } from '../../containers';
 import { FirebaseContext } from '../../context/firebase';
-import { Browse } from '../../pages';
 import Theme from '../../styles/theme';
+import { selectionFilter } from './../../utils';
 
 jest.mock('react-router-dom', () => ({
 	...jest.requireActual('react-router-dom'),
@@ -64,16 +65,50 @@ const firebase = {
 	})),
 };
 
-describe('<Browse />', () => {
-	it('renders the browse page with <SelectProfileContainer />', async () => {
-		const { getByTestId, getByPlaceholderText, queryByTestId, debug } = render(
+describe('<BrowseContainer />', () => {
+	const series = [
+		{
+			title: 'Documentaries',
+			data: [
+				{
+					id: 'series-1x',
+					title: 'Tiger King',
+					description:
+						'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
+					genre: 'documentaries',
+					maturity: '18',
+					slug: 'tiger-king',
+				},
+			],
+		},
+	];
+	const films = [
+		{
+			id: 'film-1x',
+			title: 'The Prestige',
+			description: 'Great film...',
+			genre: 'drama',
+			maturity: '15',
+			slug: 'the-prestige',
+		},
+	];
+
+	const slides = selectionFilter({ series, films });
+
+	it('renders the <BrowseContainer />', () => {
+		const user = { displayName: 'Karl', photoURL: 'profile.png' };
+
+		const { getByTestId } = render(
 			<Theme>
 				<Router>
 					<FirebaseContext.Provider value={{ firebase }}>
-						<Browse>login help</Browse>
+						<BrowseContainer slides={slides} />
 					</FirebaseContext.Provider>
 				</Router>
 			</Theme>
 		);
+
+		// fireEvent.click(getByTestId('user-profile'));
+		// expect(setProfile).toHaveBeenCalled();
 	});
 });

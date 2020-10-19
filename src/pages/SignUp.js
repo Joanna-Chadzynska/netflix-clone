@@ -41,7 +41,9 @@ const SignUp = () => {
 			<Header>
 				<Form>
 					<Form.Title>Sign In</Form.Title>
-					{authError && <Form.Error>{authError}</Form.Error>}
+					{authError && (
+						<Form.Error data-testid='error'>{authError}</Form.Error>
+					)}
 					<Form.Base onSubmit={handleSubmit} noValidate>
 						<Form.Input
 							id='firstName'
@@ -51,29 +53,44 @@ const SignUp = () => {
 							placeholder='First Name'
 							onChange={handleChange}
 						/>
-						{errors.firstName && <Form.Error>{errors.firstName}</Form.Error>}
+						{/* {errors.firstName && (
+							<Form.Error data-testid='error-name'>
+								{errors.firstName}
+							</Form.Error>
+						)} */}
 						<Form.Input
 							id='email'
 							type='email'
 							name='email'
-							value={values.email || ''}
+							// value={values.email || ''}
+							value={values.email}
 							placeholder='Email or phone number'
 							onChange={handleChange}
 						/>
-						{errors.email && <Form.Error>{errors.email}</Form.Error>}
+						{/* {errors.email && (
+							<Form.Error data-testid='error-email'>{errors.email}</Form.Error>
+						)} */}
 						<Form.Input
 							id='password'
 							type='password'
 							name='password'
 							autocomplete='off'
-							value={values.password || ''}
+							// value={values.password || ''}
+							value={values.password}
 							placeholder='Password'
 							onChange={handleChange}
 						/>
 
-						{errors.password && <Form.Error>{errors.password}</Form.Error>}
+						{/* {errors.password && (
+							<Form.Error data-testid='error-password'>
+								{errors.password}
+							</Form.Error>
+						)} */}
 
-						<Form.Submit disabled={errors.length > 0} type='submit'>
+						<Form.Submit
+							disabled={errors.length > 0}
+							type='submit'
+							data-testid='sign-up'>
 							Sign In
 						</Form.Submit>
 

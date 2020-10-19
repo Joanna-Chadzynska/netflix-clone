@@ -71,6 +71,7 @@ describe('<Browse />', () => {
 				<Router>
 					<FirebaseContext.Provider value={{ firebase }}>
 						<Browse>login help</Browse>
+						<Browse>login help</Browse>
 					</FirebaseContext.Provider>
 				</Router>
 			</Theme>

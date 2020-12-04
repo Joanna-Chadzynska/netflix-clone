@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Fuse from 'fuse.js';
 import React, { useContext, useEffect, useState } from 'react';
+import { Card, Header, Loading, Player } from '../../components';
 import * as ROUTES from '../../constants/routes';
 import { FirebaseContext } from '../../context/firebase';
 import logo from '../../logo.svg';
 import Footer from '../Footer';
-import SelectProfile from '../Profiles';
-import { Card, Header, Loading, Player } from './../../components';
+import SelectProfile from './../Profiles/Profile';
+import AnimatedLogo from './AnimatedLogo';
 
 const BrowseContainer = ({ slides }) => {
 	const [category, setCategory] = useState('series');
@@ -38,6 +39,8 @@ const BrowseContainer = ({ slides }) => {
 			setSlideRows(slides[category]);
 		}
 	}, [searchTerm]);
+
+	// <AnimatedLogo />;
 
 	return profile.displayName ? (
 		<>
@@ -124,7 +127,12 @@ const BrowseContainer = ({ slides }) => {
 			<Footer />
 		</>
 	) : (
-		<SelectProfile user={user} setProfile={setProfile} />
+		<>
+			{setTimeout(() => {
+				return <AnimatedLogo />;
+			}, 1000)}
+			<SelectProfile user={user} setProfile={setProfile} />
+		</>
 	);
 };
 

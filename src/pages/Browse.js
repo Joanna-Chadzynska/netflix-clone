@@ -8,12 +8,7 @@ const Browse = () => {
 	const { films } = useContent('films');
 	const slides = selectionFilter({ series, films });
 
-	return (
-		<>
-			<BrowseContainer slides={slides} />
-			{/* <button onClick={() => firebase.auth().signOut()}>logout</button> */}
-		</>
-	);
+	return <BrowseContainer slides={slides} />;
 };
 
 export default Browse;

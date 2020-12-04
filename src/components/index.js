@@ -7,6 +7,7 @@ export { default as Form } from './Form';
 export { default as Header } from './Header';
 export { default as Jumbotron } from './Jumbotron';
 export { default as Loading } from './Loading';
+export { default as LogoAnimation } from './LogoAnimation';
 export { default as OptForm } from './OptForm';
 export { default as Player } from './Player';
 export { default as Profiles } from './Profiles';
